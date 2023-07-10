@@ -1,0 +1,17 @@
+//Full Name  : Aydin Ghorabni
+//Student ID#: 124226170
+//Email      : aghorbani8@museneca.ca
+//Date       : May 28rd, 2023
+//Authenticity Declaration:
+//I declare this submission is the result of my own work and has not been
+//shared with any other student or 3rd party content provider. This submitted
+//piece of work is entirely of my own creation.
+
+************************************************************************************
+
+
+I gained more knowledge about dynamic memory allocation, function overloading, and using references during the workshop. To manage memory for arrays while my application was running, I used dynamic memory allocation, which made memory management more flexible. I might have numerous functions with the same name but various uses for them depending on the arguments provided thanks to function overloading.
+
+I also comprehended how references function. They enable me to access variables more quickly and without duplicating information. This made my programme run more quickly and efficiently use memory.
+
+I also learned about the "out" parameter. A function may return many values thanks to this. Unlike other options, the "out" parameter sends data back to the calling code. It gives me the ability to change a parameter's value and then give the caller the new value. If I need to modify a parameter without directly returning it or return a range of values, this is useful.
