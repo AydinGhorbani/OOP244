@@ -1,0 +1,13 @@
+  ****************************************
+Full Name  : aydi ghorbani
+Student ID#: 124179226
+Email      : aghorbani8@myseneca.ca
+
+ 
+ 
+ I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+ ****************************************
+
+
+In the first section, I learned how to divide a programme into modules. In order to facilitate code management and make it simpler to incapsulate specific features, this involves splitting a programme into smaller, more manageable components. This approach greatly up the debugging process and simplified overall codebase maintenance. Finally, I was able to merged the outcomes of each compilation to produce a fully functional programme.
+I had a great opportunity to leverage my understanding of the ipc144 discipline and develop a bespoke module during the second part of the programme.I specialised in working with Cstrings and pointers in the world of C++. By leveraging these crucial concepts, I was able to produce a curriculum that could be applied widely throughout the semester. The goal of this module was to increase my understanding of Cstrings and pointers while also introducing capabilities that will be helpful for our advanced programming tasks.
