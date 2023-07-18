@@ -2,7 +2,7 @@
 #define TRUCK_H
 
 #include "MotorVehicle.h"
-
+using namespace std;
 namespace sdds {
 
     class Truck : public MotorVehicle {
