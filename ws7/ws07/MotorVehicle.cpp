@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+f#define _CRT_SECURE_NO_WARNINGS
 #include "MotorVehicle.h"
 #include <iomanip>
 #include <cstring>
