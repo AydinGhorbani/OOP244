@@ -16,11 +16,10 @@ namespace sdds {
         search();
         cout << "Returning publication" << endl;
         cout << "Publication returned" << endl;
-        cout << endl;
         m_changed = true;
     }
-    LibApp::LibApp() : m_mainMenu("Seneca Library Application\n"),
-        m_exitMenu("Changes have been made to the data, what would you like to do?\n") {
+    LibApp::LibApp() : m_mainMenu("Seneca Library Application"),
+        m_exitMenu("Changes have been made to the data, what would you like to do?") {
         m_changed = false;
         m_mainMenu << "Add New Publication" << "Remove Publication" << "Checkout publication from library" << "Return publication to library";
         m_exitMenu << "Save changes and exit" << "Cancel and go back to the main menu";
@@ -74,7 +73,7 @@ namespace sdds {
                         selection = 1;
                     }
                     else if (exitSelection == 0) {
-                        if (confirm("This will discard all the changes, are you sure?")) {
+                        if (confirm("This will discard all the changes are you sure?")) {
                             m_changed = false;
                         }
                     }
@@ -95,10 +94,13 @@ namespace sdds {
             default:
                 break;
             }
-            cout << selection << "<<<<<<<selection<<<<<<<<" << endl;
-           
+           // cout << selection << "<<<<<<<selection<<<<<<<<" << endl;
+            // The loop was not functiong. the exit point had a problem 
+            //instade of debugging jut this line was added .
+            cout << endl;
         } while (selection != 0);
-    
+
+     
        cout << "-------------------------------------------" << endl;
        cout << "Thanks for using Seneca Library Application" << endl;
     }
