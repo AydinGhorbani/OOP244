@@ -6,6 +6,18 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		51979E3B2A707EFA00974D86 /* LblShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51979E392A707EFA00974D86 /* LblShape.cpp */; };
+		51979E3E2A708E3600974D86 /* Line.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51979E3C2A708E3600974D86 /* Line.cpp */; };
+		51979E412A708EE200974D86 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51979E3F2A708EE200974D86 /* Shape.cpp */; };
+		51979E442A708F5400974D86 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51979E422A708F5400974D86 /* Rectangle.cpp */; };
+		51979E462A70900900974D86 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51979E452A70900900974D86 /* main.cpp */; };
+		51979E5D2A7091CC00974D86 /* LblShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 51979E592A70906900974D86 /* LblShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51979E5E2A7091CC00974D86 /* Line.h in Headers */ = {isa = PBXBuildFile; fileRef = 51979E5B2A70906900974D86 /* Line.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51979E5F2A7091CC00974D86 /* Rectangle.h in Headers */ = {isa = PBXBuildFile; fileRef = 51979E582A70906900974D86 /* Rectangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51979E602A7091CC00974D86 /* Shape.h in Headers */ = {isa = PBXBuildFile; fileRef = 51979E5A2A70906900974D86 /* Shape.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		51979E2D2A707DE500974D86 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +32,16 @@
 
 /* Begin PBXFileReference section */
 		51979E2F2A707DE500974D86 /* WS8 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WS8; sourceTree = BUILT_PRODUCTS_DIR; };
+		51979E392A707EFA00974D86 /* LblShape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LblShape.cpp; path = WS8/LblShape.cpp; sourceTree = "<group>"; };
+		51979E3C2A708E3600974D86 /* Line.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Line.cpp; path = WS8/Line.cpp; sourceTree = "<group>"; };
+		51979E3F2A708EE200974D86 /* Shape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Shape.cpp; path = WS8/Shape.cpp; sourceTree = "<group>"; };
+		51979E422A708F5400974D86 /* Rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Rectangle.cpp; path = WS8/Rectangle.cpp; sourceTree = "<group>"; };
+		51979E452A70900900974D86 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = WS8/main.cpp; sourceTree = "<group>"; };
+		51979E572A70906900974D86 /* ws8data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ws8data.csv; path = WS8/ws8data.csv; sourceTree = "<group>"; };
+		51979E582A70906900974D86 /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rectangle.h; path = WS8/Rectangle.h; sourceTree = "<group>"; };
+		51979E592A70906900974D86 /* LblShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LblShape.h; path = WS8/LblShape.h; sourceTree = "<group>"; };
+		51979E5A2A70906900974D86 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shape.h; path = WS8/Shape.h; sourceTree = "<group>"; };
+		51979E5B2A70906900974D86 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Line.h; path = WS8/Line.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +58,16 @@
 		51979E262A707DE500974D86 = {
 			isa = PBXGroup;
 			children = (
+				51979E592A70906900974D86 /* LblShape.h */,
+				51979E5B2A70906900974D86 /* Line.h */,
+				51979E582A70906900974D86 /* Rectangle.h */,
+				51979E5A2A70906900974D86 /* Shape.h */,
+				51979E572A70906900974D86 /* ws8data.csv */,
+				51979E452A70900900974D86 /* main.cpp */,
+				51979E422A708F5400974D86 /* Rectangle.cpp */,
+				51979E3F2A708EE200974D86 /* Shape.cpp */,
+				51979E3C2A708E3600974D86 /* Line.cpp */,
+				51979E392A707EFA00974D86 /* LblShape.cpp */,
 				51979E312A707DE500974D86 /* WS8 */,
 				51979E302A707DE500974D86 /* Products */,
 			);
@@ -58,11 +90,26 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		51979E5C2A7091C200974D86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51979E5D2A7091CC00974D86 /* LblShape.h in Headers */,
+				51979E5E2A7091CC00974D86 /* Line.h in Headers */,
+				51979E5F2A7091CC00974D86 /* Rectangle.h in Headers */,
+				51979E602A7091CC00974D86 /* Shape.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		51979E2E2A707DE500974D86 /* WS8 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51979E362A707DE500974D86 /* Build configuration list for PBXNativeTarget "WS8" */;
 			buildPhases = (
+				51979E5C2A7091C200974D86 /* Headers */,
 				51979E2B2A707DE500974D86 /* Sources */,
 				51979E2C2A707DE500974D86 /* Frameworks */,
 				51979E2D2A707DE500974D86 /* CopyFiles */,
@@ -113,6 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51979E3B2A707EFA00974D86 /* LblShape.cpp in Sources */,
+				51979E3E2A708E3600974D86 /* Line.cpp in Sources */,
+				51979E412A708EE200974D86 /* Shape.cpp in Sources */,
+				51979E462A70900900974D86 /* main.cpp in Sources */,
+				51979E442A708F5400974D86 /* Rectangle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
