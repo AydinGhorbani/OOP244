@@ -52,7 +52,7 @@ int main() {
    delete S[0];
    delete S[1];
    cout << "Reading the data from a file" << endl;
-   ifstream file("/Users/aydinghorbani/Desktop/OOP245/github/OOP244/WS8/WS8/WS8/ws8data.csv");
+   ifstream file("ws8data.csv");
    Shape* sptr;
    char type;
    while (file) {
