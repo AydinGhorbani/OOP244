@@ -1,0 +1,14 @@
+
+ ****************************************
+ Full Name  : Aydin Ghorbani
+ Student ID#: 124170226
+ Email      : aghorbani8@myseneca.ca
+
+
+ I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+ ****************************************
+in this workshop, I learned about the role of virtual functions in inheritance in C++. I created a hierarchy of classes including abstract base classes and concrete classes, to implement different shapes with labels. Virtual functions allowed me to override base class methods in derived classes, providing specialized behavior for each shape.
+
+I understood the importance of pure virtual functions in defining interfaces and ensuring that derived classes implement necessary methods. The concept of dynamic memory allocation was crucial in managing character pointers for labels, preventing memory leaks.
+
+by practicing inheritance and polymorphism, I gained insights into building modular and extensible code. The experience deepened my understanding of object-oriented programming and enhanced my ability to design and implement complex systems in C++.
