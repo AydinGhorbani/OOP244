@@ -35,6 +35,8 @@
 		512493152A776C0900B9210F /* dcwrOutput.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dcwrOutput.html; sourceTree = "<group>"; };
 		512493182A776C0900B9210F /* dcwrLittleOutput.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dcwrLittleOutput.html; sourceTree = "<group>"; };
 		5124931E2A776D0D00B9210F /* w9Tester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = w9Tester.cpp; sourceTree = "<group>"; };
+		5124933C2A778FAA00B9210F /* Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = "../../MS3/Xcode prj/Xcode prj/Utils.cpp"; sourceTree = "<group>"; };
+		5124933D2A778FAA00B9210F /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = "../../MS3/Xcode prj/Xcode prj/Utils.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,8 @@
 				5124930E2A776C0800B9210F /* HtmlText.cpp */,
 				512493112A776C0900B9210F /* HtmlText.h */,
 				512493132A776C0900B9210F /* test.txt */,
+				5124933C2A778FAA00B9210F /* Utils.cpp */,
+				5124933D2A778FAA00B9210F /* Utils.h */,
 				5124931E2A776D0D00B9210F /* w9Tester.cpp */,
 				512493142A776C0900B9210F /* Text.cpp */,
 				512493122A776C0900B9210F /* Text.h */,
