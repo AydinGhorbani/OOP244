@@ -1,8 +1,8 @@
 /***********************************************************************
 // OOP244 Utils Module
 // File	Utils.h
-// Version  2.0
-// Date     Date 23/07/13
+// Version  3.0
+// Date     Date 30/jul/13
 // Author   Aydin Ghorbani
 // Description
 //
@@ -24,5 +24,6 @@
         void reAloCpy( char*& des, const char* src );
         void aloCpy( char*& des, const char* src );
     };
+    extern Utils Ut;
 }
 #endif 

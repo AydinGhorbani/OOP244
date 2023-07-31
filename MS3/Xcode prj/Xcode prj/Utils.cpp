@@ -47,6 +47,7 @@ namespace sdds {
     return nullptr;
 }
     //directly copied from https://github.com/Seneca-244200/OOP244-NAA-NBB-ZAA-Notes
+    // some modifications implimented.
     void Utils::reAloCpy( char*& des, const char* src ) {
        delete[] des;
        aloCpy( des, src );
@@ -54,8 +55,9 @@ namespace sdds {
     void Utils::aloCpy( char*& des, const char* src ) {
        des = nullptr;
        if ( src ) {
-          des = new char[ut.strlen( src ) + 1];
-          ut.strcpy( des, src );
+          des = new char(strLen( src ) + 1];
+          strCpy( des, src );
        }
     }
+
 }

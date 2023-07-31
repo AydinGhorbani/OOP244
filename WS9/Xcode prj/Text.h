@@ -6,12 +6,15 @@ namespace sdds {
       char* m_content ;
       int getFileLength()const;
    protected:
-      const char& operator[](int index)const;
+    const char& operator[](int index)const;
+    Text& operator=(const Text& T);
    public:
-      Text(const char* filename=nullptr);
-
-
+    Text(const char* filename=nullptr);
+    Text(const Text& T);
+    Text() : m_filename(nullptr) , m_content(nullptr){};
+       
       void read();
+      virtual ~Text();
       virtual void write(std::ostream& os)const;
    };
 }
