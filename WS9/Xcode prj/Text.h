@@ -16,7 +16,7 @@ namespace sdds {
     Text& operator=(const Text& T);
       void setEmpty();
       void read();
-      void write(std::ostream& os)const;
+      virtual void write(std::ostream& os)const;
       virtual ~Text();
    };
     std::ostream &operator<< (std::ostream &os, const Text &src);

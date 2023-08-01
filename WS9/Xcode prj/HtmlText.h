@@ -1,7 +1,7 @@
 #ifndef SDDS_HTMLTEXT_H__
 #define SDDS_HTMLTEXT_H__
 #include "Text.h"
-#include "Utils.h"
+#include "cstring.h"
 namespace sdds {
    class HtmlText :  public Text {
       char* m_title;

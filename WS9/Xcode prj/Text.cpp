@@ -1,6 +1,6 @@
 #include <fstream>
 #include "Text.h"
-#include "Utils.h"
+#include "cstring.h"
 
 using namespace std;
 namespace sdds {
@@ -24,7 +24,7 @@ namespace sdds {
             Ut.aloCpy(m_filename, T.m_filename);
             read();
         }
-        setEmpty();
+        else setEmpty();
         return *this;
     }
 
@@ -35,9 +35,7 @@ namespace sdds {
         }
     }
 
-    void Text::write(std::ostream &os) const {
-      if (m_content) os << m_content;
-    }
+
 
     void Text::read() {
         // https://stackoverflow.com/questions/195323/what-is-the-most-elegant-way-to-read-a-text-file-with-c
@@ -63,7 +61,9 @@ namespace sdds {
         }
     }
     
-    
+    void Text::write(std::ostream &os) const {
+      if (m_content) os << m_content;
+    }
     
     std::ostream &operator<<(std::ostream &os, const Text& src) {
       src.write(os);

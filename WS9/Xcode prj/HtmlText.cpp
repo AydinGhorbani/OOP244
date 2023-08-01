@@ -1,5 +1,5 @@
 #include "HtmlText.h"
-#include "Utils.h"
+#include "cstring.h"
 
 namespace sdds {
 
