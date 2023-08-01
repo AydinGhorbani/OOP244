@@ -24,6 +24,7 @@
         void reAloCpy( char*& des, const char* src );
         void aloCpy( char*& des, const char* src );
     };
+    
     extern Utils Ut;
 }
 #endif 
