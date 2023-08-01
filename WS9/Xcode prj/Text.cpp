@@ -20,31 +20,16 @@ namespace sdds {
     }
 
     Text& Text::operator=(const Text& T){
-        if (this != &T && m_filename)
-        {
-            delete[] m_filename;
-        }
         if (T.m_filename){
-            Ut.reAloCpy(m_filename, T.m_filename);
+            Ut.aloCpy(m_filename, T.m_filename);
             read();
         }
         setEmpty();
         return *this;
     }
 
-    Text::Text(const char* filename): m_filename(nullptr) {
-        
-        std::ifstream file(m_filename);
-        
-        if (file) {
-            // this line is just coded for code readability
-            // has no effect on submitter. maybe dose not have any effect on
-            // the readablity at all but it helped me :)
-            cout << "Error opening file: " << filename << endl;
-            return;
-        }
-        //the only codes needed for copy constructor are lines 45 to 47.
-        if(filename){
+    Text::Text(const char* filename){
+           if(filename){
             Ut.aloCpy(m_filename, filename);
             read();
         }

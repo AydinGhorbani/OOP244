@@ -3,7 +3,7 @@
 
 namespace sdds {
 
-HtmlText::HtmlText(const HtmlText& src): Text(src){
+HtmlText::HtmlText(const HtmlText& src){
   *this = src;
 }
 
@@ -20,9 +20,8 @@ HtmlText::~HtmlText() {
 HtmlText &HtmlText::operator=(const HtmlText& src) {
   if (this != &src)
   {
-    *this = src;
+      (Text&)*this = src;
 
-    if (m_title) delete[] m_title;
       
     if (src.m_title)
     {
@@ -35,49 +34,44 @@ HtmlText &HtmlText::operator=(const HtmlText& src) {
 
 
 void HtmlText::write(std::ostream &os) const {
-    bool multipleSpaces = false;
-
-    // Convert the text file to a simple HTML file
     os << "<html><head><title>";
-    if (m_title != nullptr) {
-        os << m_title;
-    } else {
-        os << "No title";
-    }
+    os << (m_title ? m_title : "No title");
     os << "</title></head>\n<body>\n";
 
     if (m_title) {
         os << "<h1>" << m_title << "</h1>\n";
+        bool MS = false;
+        const char* content = Text::getContent();
 
-        int index = 0;
-        char currentChar;
+        for (const char* ptr = content; *ptr; ptr++) {
+            switch (*ptr) {
+                case ' ':
+                    os << (MS ? "&nbsp;" : " ");
+                    MS = true;
+                    break;
 
-        while ((currentChar = Text::operator[](index)) != '\0') {
-            if (currentChar == ' ') {
-                if (multipleSpaces) {
-                    os << "&nbsp;";
-                } else {
-                    os << currentChar;
-                    multipleSpaces = true;
-                }
-            } else if (currentChar == '<') {
-                os << "&lt;";
-                multipleSpaces = false;
-            } else if (currentChar == '>') {
-                os << "&gt;";
-                multipleSpaces = false;
-            } else if (currentChar == '\n') {
-                os << "<br />\n";
-                multipleSpaces = false;
-            } else {
-                os << currentChar;
-                multipleSpaces = false;
+                case '<':
+                    os << "&lt;";
+                    MS = false;
+                    break;
+
+                case '>':
+                    os << "&gt;";
+                    MS = false;
+                    break;
+
+                case '\n':
+                    os << "<br />\n";
+                    MS = false;
+                    break;
+
+                default:
+                    os << *ptr;
+                    MS = false;
+                    break;
             }
-
-            index++;
         }
     }
-
     os << "</body>\n</html>";
 }
 
