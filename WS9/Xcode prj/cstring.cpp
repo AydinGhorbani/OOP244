@@ -57,7 +57,11 @@ Utils Ut;
     }
 
     void Utils::aloCpy( char*& des, const char* src ) {
-       des = nullptr;
+        if (des != nullptr) {
+            delete[] des;
+            // It is a good practice to set the pointer to nullptr after deallocation.
+            des = nullptr;
+        }
        if ( src ) {
            des = new char[Ut.strLen( src ) + 1];
           Ut.strCpy( des, src );

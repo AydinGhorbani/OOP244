@@ -1,7 +1,17 @@
+/*
+ ****************************************
+ Full Name  : Aydin Ghorbani
+ Student ID#: 124170226
+ Email      : aghorbani8@myseneca.ca
+ 
+ 
+ I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+ ****************************************
+ */
 #include "HtmlText.h"
 #include "cstring.h"
-#include <iostream>
-using namespace std;
+
+
 namespace sdds {
 
 HtmlText::HtmlText(const HtmlText& src){
@@ -45,8 +55,12 @@ void HtmlText::write(std::ostream &ostr) const {
     ostr << "</title></head>\n<body>\n";
 
     if (m_title) {
+        //casting all the file in a static pointer is much more efficient then
+        // going though the loop and calling and allocationg memory for insertion
+        // operator.
         ostr << "<h1>" << m_title << "</h1>\n";
         bool MS = false;
+        
         const char* content = Text::getContent();
 
         for (ptr = content; *ptr; ptr++) {

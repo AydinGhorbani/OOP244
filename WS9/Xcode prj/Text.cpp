@@ -1,3 +1,14 @@
+/*
+ ****************************************
+ Full Name  : Aydin Ghorbani
+ Student ID#: 124170226
+ Email      : aghorbani8@myseneca.ca
+ 
+ completion date (updated) : 9/june/23
+ 
+ I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+ ****************************************
+ */
 #include <fstream>
 #include "Text.h"
 #include "cstring.h"
@@ -47,7 +58,7 @@ namespace sdds {
         // Read the file and store it in a string
         
         std::ifstream file(m_filename, std::ios::binary);
-        
+        if (m_content) delete[] m_content;
         if (file.is_open()) {
             file.seekg(0, std::ios::end);
             std::streamsize size = file.tellg();
@@ -56,6 +67,7 @@ namespace sdds {
             file.read(m_content, size);
             m_content[size] = '\0';
             file.close();
+            
         } else {
             m_content = nullptr;
         }
