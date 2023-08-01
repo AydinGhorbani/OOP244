@@ -37,7 +37,11 @@ HtmlText &HtmlText::operator=(const HtmlText& src) {
 void HtmlText::write(std::ostream &ostr) const {
     const char* ptr{};
     ostr << "<html><head><title>";
-    ostr << (m_title ? m_title : "No title");
+    if (m_title) {
+        ostr << m_title;
+    } else {
+        ostr << "No title";
+    }
     ostr << "</title></head>\n<body>\n";
 
     if (m_title) {
@@ -46,36 +50,28 @@ void HtmlText::write(std::ostream &ostr) const {
         const char* content = Text::getContent();
 
         for (ptr = content; *ptr; ptr++) {
-            switch (*ptr) {
-                case ' ':
-                   ostr << (MS ? "&nbsp;" : " ");
-                    MS = true;
-                    break;
-
-                case '<':
-                    ostr << "&lt;";
-                    MS = false;
-                    break;
-
-                case '>':
-                    ostr << "&gt;";
-                    MS = false;
-                    break;
-
-                case '\n':
-                    ostr << "<br />\n";
-                    MS = false;
-                    break;
-
-                default:
-                    ostr << *ptr;
-                    MS = false;
-                    break;
+            if (*ptr == ' ') {
+                ostr << (MS ? "&nbsp;" : " ");
+                MS = true;
+            } else if (*ptr == '<') {
+                ostr << "&lt;";
+                MS = false;
+            } else if (*ptr == '>') {
+                ostr << "&gt;";
+                MS = false;
+            } else if (*ptr == '\n') {
+                ostr << "<br />\n";
+                MS = false;
+            } else {
+                ostr << *ptr;
+                MS = false;
             }
         }
     }
+
     ostr << "</body>\n</html>";
 }
+
 
 
 }
