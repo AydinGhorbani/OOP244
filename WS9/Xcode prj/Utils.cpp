@@ -16,7 +16,7 @@
 #include "Utils.h"
 
 namespace sdds {
-
+Utils Ut;
 	void Utils::strCpy(char* des, const char* src) {
 		while (*src != '\0') {
 			*des = *src;

@@ -8,12 +8,12 @@ namespace sdds {
       int getFileLength()const;
    protected:
     const char& operator[](int index)const;
-    Text& operator=(const Text& T);
 
+    const char* getContent() const;
    public:
     Text(const char* filename=nullptr);
     Text(const Text& T);
-    Text() : m_filename(nullptr) , m_content(nullptr){};
+    Text& operator=(const Text& T);
       void setEmpty();
       void read();
       void write(std::ostream& os)const;

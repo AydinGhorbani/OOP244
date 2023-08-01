@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		5124931A2A776C0900B9210F /* HtmlText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5124930E2A776C0800B9210F /* HtmlText.cpp */; };
 		5124931B2A776C0900B9210F /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 512493142A776C0900B9210F /* Text.cpp */; };
+		5124933F2A79033100B9210F /* w9Tester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5124931E2A776D0D00B9210F /* w9Tester.cpp */; };
+		512493402A79033700B9210F /* Text.h in Headers */ = {isa = PBXBuildFile; fileRef = 512493122A776C0900B9210F /* Text.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		512493422A79033E00B9210F /* HtmlText.h in Headers */ = {isa = PBXBuildFile; fileRef = 512493112A776C0900B9210F /* HtmlText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		512493462A79057300B9210F /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 512493442A79057300B9210F /* Utils.cpp */; };
+		512493472A79057300B9210F /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 512493452A79057300B9210F /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +40,8 @@
 		512493152A776C0900B9210F /* dcwrOutput.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dcwrOutput.html; sourceTree = "<group>"; };
 		512493182A776C0900B9210F /* dcwrLittleOutput.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dcwrLittleOutput.html; sourceTree = "<group>"; };
 		5124931E2A776D0D00B9210F /* w9Tester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = w9Tester.cpp; sourceTree = "<group>"; };
-		5124933C2A778FAA00B9210F /* Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = "../../MS3/Xcode prj/Xcode prj/Utils.cpp"; sourceTree = "<group>"; };
-		5124933D2A778FAA00B9210F /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = "../../MS3/Xcode prj/Xcode prj/Utils.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		512493442A79057300B9210F /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		512493452A79057300B9210F /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +64,9 @@
 				512493152A776C0900B9210F /* dcwrOutput.html */,
 				5124930E2A776C0800B9210F /* HtmlText.cpp */,
 				512493112A776C0900B9210F /* HtmlText.h */,
+				512493442A79057300B9210F /* Utils.cpp */,
+				512493452A79057300B9210F /* Utils.h */,
 				512493132A776C0900B9210F /* test.txt */,
-				5124933C2A778FAA00B9210F /* Utils.cpp */,
-				5124933D2A778FAA00B9210F /* Utils.h */,
 				5124931E2A776D0D00B9210F /* w9Tester.cpp */,
 				512493142A776C0900B9210F /* Text.cpp */,
 				512493122A776C0900B9210F /* Text.h */,
@@ -87,11 +92,25 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		5124933E2A79032300B9210F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512493472A79057300B9210F /* Utils.h in Headers */,
+				512493402A79033700B9210F /* Text.h in Headers */,
+				512493422A79033E00B9210F /* HtmlText.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		512493022A776BDC00B9210F /* Xcode prj */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5124930A2A776BDC00B9210F /* Build configuration list for PBXNativeTarget "Xcode prj" */;
 			buildPhases = (
+				5124933E2A79032300B9210F /* Headers */,
 				512492FF2A776BDC00B9210F /* Sources */,
 				512493002A776BDC00B9210F /* Frameworks */,
 				512493012A776BDC00B9210F /* CopyFiles */,
@@ -144,6 +163,8 @@
 			files = (
 				5124931B2A776C0900B9210F /* Text.cpp in Sources */,
 				5124931A2A776C0900B9210F /* HtmlText.cpp in Sources */,
+				5124933F2A79033100B9210F /* w9Tester.cpp in Sources */,
+				512493462A79057300B9210F /* Utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

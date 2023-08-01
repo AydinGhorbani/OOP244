@@ -1,7 +1,7 @@
 #include <fstream>
 #include "Text.h"
 #include "Utils.h"
-#include <iostream>
+
 using namespace std;
 namespace sdds {
 
@@ -18,6 +18,7 @@ namespace sdds {
     Text::Text(const Text& T){
         *this = T;
     }
+
     Text& Text::operator=(const Text& T){
         if (this != &T && m_filename)
         {
@@ -103,5 +104,7 @@ namespace sdds {
        if (m_content) delete [] m_content;
         }
 
-
+    const char* Text::getContent() const {
+        return m_content;
+    }
     }
