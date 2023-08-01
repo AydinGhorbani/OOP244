@@ -3,8 +3,8 @@
 #include <iostream>
 namespace sdds {
    class Text {
-      char* m_filename ;
-      char* m_content ;
+       char* m_filename{} ;
+       char* m_content{};
       int getFileLength()const;
    protected:
     const char& operator[](int index)const;

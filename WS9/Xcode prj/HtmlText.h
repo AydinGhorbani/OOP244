@@ -4,13 +4,13 @@
 #include "cstring.h"
 namespace sdds {
    class HtmlText :  public Text {
-      char* m_title;
+       char* m_title{};
    public:
        HtmlText(const char* filename=nullptr, const char* title = nullptr);
        HtmlText(const HtmlText& src);
        HtmlText &operator=(const HtmlText& src);
        virtual ~HtmlText();
-       void write(std::ostream &os) const;
+       void write(std::ostream &ostr) const;
    };
 }
 #endif // !SDDS_HTMLTEXT_H__
