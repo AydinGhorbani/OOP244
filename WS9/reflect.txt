@@ -1,0 +1,12 @@
+
+ ****************************************
+ Full Name  : Aydin Ghorbani
+ Student ID#: 124170226
+ Email      : aghorbani8@myseneca.ca
+
+
+ I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+ ****************************************
+
+In this workshop I learned even a single line in the code could play a significant 
+Role in code efficiency. In the first versions of my code the memory allocation reached up to 1.5 gigabyte and runtime riched 15 minutes on Xcode. The problem was when ever the code wanted to read a character from a huge text file it allocates memory for the text file and read until the character but un the last version of the code, I saved the allocated text file in a static memory so the I did not allocate memory each time it goes over the loop. So the number of allocations reduced to only 49 allocation and just 272 KB memory allocated ofr entire program, as well as run time it reduced significantly in way that it only needed the <ENTER> button to execute.
