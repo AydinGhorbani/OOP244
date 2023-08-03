@@ -16,7 +16,8 @@
 #include "Utils.h"
 
 namespace sdds {
-Utils Ut;
+    Utils Ut;
+
 	void Utils::strCpy(char* des, const char* src) {
 		while (*src != '\0') {
 			*des = *src;
@@ -47,7 +48,16 @@ Utils Ut;
         str1++;
     }
     return nullptr;
-}
+    }
+    void Utils::strnCpy(char* des, const char* src, int len) {
+        int i;
+        for (i = 0; i < len && src[i] != '\0'; i++) {
+            des[i] = src[i];
+        }
+        if (i < len) {
+            des[i] = '\0';
+        }
+    }
     //directly copied from https://github.com/Seneca-244200/OOP244-NAA-NBB-ZAA-Notes
     // some modifications implimented.
 
