@@ -62,7 +62,7 @@ namespace sdds {
    bool operator!=(const Date& date1, const Date& date2);
    bool operator>=(const Date& date1, const Date& date2);
    bool operator<=(const Date& date1, const Date& date2);
-   bool operator<(const Date& date1, const Date& date2);
+   bool operator<(const Date& date ,const Date& date2);
    bool operator>(const Date& date1, const Date& date2);
    int operator-(const Date& date1, const Date& date2);
 

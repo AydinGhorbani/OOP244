@@ -10,11 +10,10 @@
 /////////////////////////////////////////////////////////////////
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <string>
 #include <iomanip>
 #include "Utils.h"
 #include "Publication.h"
-
+using namespace std;
 namespace sdds {
 
 // to avoid code duplication.
@@ -33,32 +32,32 @@ void Publication::setEmpty(){
 		*this = publication;
 	}
 
-	Publication& Publication::operator=(const Publication& publication) {
-		set(publication.m_membership);
-		setRef(publication.m_libRef);
-		Ut.strCpy(m_shelfId, publication.m_shelfId);
-		m_date = publication.m_date;
-		if (m_title)
-		{
-			delete[] m_title;
-		}
-        
-		if (publication.m_title) {
-            Ut.aloCpy(m_title, publication.m_title);
-		}
-		else {
-			m_title = nullptr;
-		}
+Publication& Publication::operator=(const Publication& source)
+{
+   set(source.m_membership);
+   setRef(source.m_libRef);
+   Ut.strCpy(this->m_shelfId, source.m_shelfId);
+   this->m_date = source.m_date;
 
-		return *this;
-	}
+   if (this) {
+      delete[] m_title;
+   }
+   Ut.aloCpy(this->m_title, source.m_title);
+   return *this;
+}
 
 
     // set functions are divided from other methods so it can be easily read and rewied for further
     // milestones.
 	void Publication::set(int member_id)
 	{
-		m_membership = member_id;
+        if (member_id < 100000 && member_id> 9999) {
+           m_membership = member_id;
+        }
+        else {
+           m_membership = 0;
+        }
+     
 	}
 
 	void Publication::setRef(int value)
@@ -73,7 +72,7 @@ void Publication::setEmpty(){
 		return 'P';
 	}
    bool Publication::onLoan() const {
-    return m_membership;
+    return m_membership != 0;
     }
 	Date Publication::checkoutDate()const {
 		return m_date;
@@ -97,8 +96,8 @@ void Publication::setEmpty(){
 		return m_libRef;
 	}
 
-    std::istream& Publication::read(std::istream& istr) {
-    char titleInput[SDDS_TITLE_WIDTH + 1]={0};
+std::istream& Publication::read(std::istream& istr) {
+    char titleInput[256]{};
     char shelfIdInput[SDDS_SHELF_ID_LEN + 1]={0};
     int libRefInput = -1;
     int membershipInput = 0;
@@ -142,28 +141,42 @@ void Publication::setEmpty(){
         m_date = dateInput;
         m_libRef = libRefInput;
     }
+
     return istr;
 }
 
-    std::ostream& Publication::write(std::ostream& os) const {
-    if (conIO(os)) {
-        os << "| " << m_shelfId << " | " << std::setw(30) << std::left << std::setfill('.') << m_title << " | ";
-    } else {
-        os << type() << "\t" << "\t" << m_libRef << "\t" << m_shelfId << "\t" << m_title << "\t";
-    }
+std::ostream& Publication::write(std::ostream& os) const {
+   char temp[SDDS_TITLE_WIDTH + 1]{};
+   Ut.strnCpy(temp,m_title,SDDS_TITLE_WIDTH);
+   if (conIO(os)) {
+      os << "| " << m_shelfId << " | ";
+      os.width(SDDS_TITLE_WIDTH);
+      os.fill('.');
+      os << std::left << temp << " | ";
+      os.unsetf(ios::left);
+      if (m_membership != 0) {
+         os << m_membership;
+      }
+      else {
+         os << " N/A ";
+      }
+      os << " | " << m_date << " |";
+   }
+   else {
+      os << type() << "\t";
+      os << "\t" << m_libRef;
+      os << "\t" << m_shelfId;
+      os << "\t" << m_title << "\t";
+      if (onLoan()) {
+         os << m_membership;
+      }
+      else {
+         os << " N/A ";
+      }
+      os << "\t" << m_date;
+   }
 
-    if (m_membership != 0) {
-        os << m_membership;
-    } else {
-        os << " N/A ";
-    }
-
-    os << " | " << m_date;
-
-        if (conIO(os)) {
-            os << " |";
-        }
-    return os;
+   return os;
 }
 
 

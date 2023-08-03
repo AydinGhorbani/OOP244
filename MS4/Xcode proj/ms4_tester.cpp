@@ -1,7 +1,7 @@
 // Final Project Milestone 4
-// Book 
-// File	ms4_tester.cpp
-// Author	Fardad Soleimanloo
+// Book
+// File    ms4_tester.cpp
+// Author    Fardad Soleimanloo
 // Revision History
 // -----------------------------------------------------------
 // Name               Date                 Reason

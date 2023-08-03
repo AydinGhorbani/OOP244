@@ -16,24 +16,24 @@
 #include "Utils.h"
 
 namespace sdds {
-    Utils Ut;
+Utils Ut;
 
-	void Utils::strCpy(char* des, const char* src) {
-		while (*src != '\0') {
-			*des = *src;
-			des++;
-			src++;
-		}
-		*des = '\0';
-	}
-	int Utils::strLen(const char* s) {
-		int len = 0;
-		while (*s != '\0') {
-			len++;
-			s++;
-		}
-		return len;
-	}
+    void Utils::strCpy(char* des, const char* src) {
+        while (*src != '\0') {
+            *des = *src;
+            des++;
+            src++;
+        }
+        *des = '\0';
+    }
+    int Utils::strLen(const char* s) {
+        int len = 0;
+        while (*s != '\0') {
+            len++;
+            s++;
+        }
+        return len;
+    }
     const char* Utils::strStr(const char* str1, const char* str2) {
     while (*str1 != '\0') {
         const char* p1 = str1;
@@ -73,4 +73,4 @@ namespace sdds {
           Ut.strCpy( des, src );
        }
     }
-}
+    }
