@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5124933A2A777FA100B9210F /* ms4_tester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 512493332A777FA100B9210F /* ms4_tester.cpp */; };
-		5124933B2A777FA100B9210F /* Book.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 512493382A777FA100B9210F /* Book.cpp */; };
+		51DF19BD2A7B349E0060813B /* Publication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51DF19B12A7B349E0060813B /* Publication.cpp */; };
+		51DF19BE2A7B349E0060813B /* ms4_tester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51DF19B22A7B349E0060813B /* ms4_tester.cpp */; };
+		51DF19BF2A7B349E0060813B /* Book.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51DF19B32A7B349E0060813B /* Book.cpp */; };
+		51DF19C02A7B349E0060813B /* Date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51DF19B52A7B349E0060813B /* Date.cpp */; };
+		51DF19C12A7B349E0060813B /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51DF19B72A7B349E0060813B /* Utils.cpp */; };
+		51DF19C22A7B349E0060813B /* Streamable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51DF19B82A7B349E0060813B /* Streamable.cpp */; };
+		51DF19C32A7B349E0060813B /* Lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51DF19BA2A7B349E0060813B /* Lib.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		512493262A777F8200B9210F /* CopyFiles */ = {
+		51DF19A12A7B34720060813B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,19 +29,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		512493282A777F8200B9210F /* Xcode proj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Xcode proj"; sourceTree = BUILT_PRODUCTS_DIR; };
-		512493322A777FA100B9210F /* ms4.vcxproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ms4.vcxproj; path = ../../ms4.vcxproj; sourceTree = "<group>"; };
-		512493332A777FA100B9210F /* ms4_tester.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ms4_tester.cpp; path = ../../ms4_tester.cpp; sourceTree = "<group>"; };
-		512493342A777FA100B9210F /* BooksOriginal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BooksOriginal.txt; path = ../../BooksOriginal.txt; sourceTree = "<group>"; };
-		512493352A777FA100B9210F /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = ../../Book.h; sourceTree = "<group>"; };
-		512493362A777FA100B9210F /* output.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = output.md; path = ../../output.md; sourceTree = "<group>"; };
-		512493372A777FA100B9210F /* ms4.vcxproj.filters */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ms4.vcxproj.filters; path = ../../ms4.vcxproj.filters; sourceTree = "<group>"; };
-		512493382A777FA100B9210F /* Book.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Book.cpp; path = ../../Book.cpp; sourceTree = "<group>"; };
-		512493392A777FA100B9210F /* Books.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Books.txt; path = ../../Books.txt; sourceTree = "<group>"; };
+		51DF19A32A7B34720060813B /* Xcode proj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Xcode proj"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51DF19AD2A7B349D0060813B /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		51DF19AE2A7B349E0060813B /* Publication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Publication.h; sourceTree = "<group>"; };
+		51DF19AF2A7B349E0060813B /* BooksOriginal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BooksOriginal.txt; sourceTree = "<group>"; };
+		51DF19B02A7B349E0060813B /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		51DF19B12A7B349E0060813B /* Publication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Publication.cpp; sourceTree = "<group>"; };
+		51DF19B22A7B349E0060813B /* ms4_tester.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ms4_tester.cpp; sourceTree = "<group>"; };
+		51DF19B32A7B349E0060813B /* Book.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Book.cpp; sourceTree = "<group>"; };
+		51DF19B42A7B349E0060813B /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
+		51DF19B52A7B349E0060813B /* Date.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Date.cpp; sourceTree = "<group>"; };
+		51DF19B62A7B349E0060813B /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
+		51DF19B72A7B349E0060813B /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		51DF19B82A7B349E0060813B /* Streamable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Streamable.cpp; sourceTree = "<group>"; };
+		51DF19B92A7B349E0060813B /* Books.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Books.txt; sourceTree = "<group>"; };
+		51DF19BA2A7B349E0060813B /* Lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lib.cpp; sourceTree = "<group>"; };
+		51DF19BB2A7B349E0060813B /* Streamable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Streamable.h; sourceTree = "<group>"; };
+		51DF19BC2A7B349E0060813B /* output.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = output.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		512493252A777F8200B9210F /* Frameworks */ = {
+		51DF19A02A7B34720060813B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,33 +59,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5124931F2A777F8200B9210F = {
+		51DF199A2A7B34720060813B = {
 			isa = PBXGroup;
 			children = (
-				5124932A2A777F8200B9210F /* Xcode proj */,
-				512493292A777F8200B9210F /* Products */,
+				51DF19B32A7B349E0060813B /* Book.cpp */,
+				51DF19B02A7B349E0060813B /* Book.h */,
+				51DF19AE2A7B349E0060813B /* Publication.h */,
+				51DF19B92A7B349E0060813B /* Books.txt */,
+				51DF19AF2A7B349E0060813B /* BooksOriginal.txt */,
+				51DF19B52A7B349E0060813B /* Date.cpp */,
+				51DF19B42A7B349E0060813B /* Date.h */,
+				51DF19BA2A7B349E0060813B /* Lib.cpp */,
+				51DF19B62A7B349E0060813B /* Lib.h */,
+				51DF19B22A7B349E0060813B /* ms4_tester.cpp */,
+				51DF19BC2A7B349E0060813B /* output.md */,
+				51DF19B12A7B349E0060813B /* Publication.cpp */,
+				51DF19B82A7B349E0060813B /* Streamable.cpp */,
+				51DF19BB2A7B349E0060813B /* Streamable.h */,
+				51DF19B72A7B349E0060813B /* Utils.cpp */,
+				51DF19AD2A7B349D0060813B /* Utils.h */,
+				51DF19A52A7B34720060813B /* Xcode proj */,
+				51DF19A42A7B34720060813B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		512493292A777F8200B9210F /* Products */ = {
+		51DF19A42A7B34720060813B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				512493282A777F8200B9210F /* Xcode proj */,
+				51DF19A32A7B34720060813B /* Xcode proj */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5124932A2A777F8200B9210F /* Xcode proj */ = {
+		51DF19A52A7B34720060813B /* Xcode proj */ = {
 			isa = PBXGroup;
 			children = (
-				512493382A777FA100B9210F /* Book.cpp */,
-				512493352A777FA100B9210F /* Book.h */,
-				512493392A777FA100B9210F /* Books.txt */,
-				512493342A777FA100B9210F /* BooksOriginal.txt */,
-				512493332A777FA100B9210F /* ms4_tester.cpp */,
-				512493322A777FA100B9210F /* ms4.vcxproj */,
-				512493372A777FA100B9210F /* ms4.vcxproj.filters */,
-				512493362A777FA100B9210F /* output.md */,
 			);
 			path = "Xcode proj";
 			sourceTree = "<group>";
@@ -80,13 +101,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		512493272A777F8200B9210F /* Xcode proj */ = {
+		51DF19A22A7B34720060813B /* Xcode proj */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5124932F2A777F8200B9210F /* Build configuration list for PBXNativeTarget "Xcode proj" */;
+			buildConfigurationList = 51DF19AA2A7B34720060813B /* Build configuration list for PBXNativeTarget "Xcode proj" */;
 			buildPhases = (
-				512493242A777F8200B9210F /* Sources */,
-				512493252A777F8200B9210F /* Frameworks */,
-				512493262A777F8200B9210F /* CopyFiles */,
+				51DF199F2A7B34720060813B /* Sources */,
+				51DF19A02A7B34720060813B /* Frameworks */,
+				51DF19A12A7B34720060813B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -94,24 +115,24 @@
 			);
 			name = "Xcode proj";
 			productName = "Xcode proj";
-			productReference = 512493282A777F8200B9210F /* Xcode proj */;
+			productReference = 51DF19A32A7B34720060813B /* Xcode proj */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		512493202A777F8200B9210F /* Project object */ = {
+		51DF199B2A7B34720060813B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					512493272A777F8200B9210F = {
+					51DF19A22A7B34720060813B = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
-			buildConfigurationList = 512493232A777F8200B9210F /* Build configuration list for PBXProject "Xcode proj" */;
+			buildConfigurationList = 51DF199E2A7B34720060813B /* Build configuration list for PBXProject "Xcode proj" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,30 +140,35 @@
 				en,
 				Base,
 			);
-			mainGroup = 5124931F2A777F8200B9210F;
-			productRefGroup = 512493292A777F8200B9210F /* Products */;
+			mainGroup = 51DF199A2A7B34720060813B;
+			productRefGroup = 51DF19A42A7B34720060813B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				512493272A777F8200B9210F /* Xcode proj */,
+				51DF19A22A7B34720060813B /* Xcode proj */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		512493242A777F8200B9210F /* Sources */ = {
+		51DF199F2A7B34720060813B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5124933B2A777FA100B9210F /* Book.cpp in Sources */,
-				5124933A2A777FA100B9210F /* ms4_tester.cpp in Sources */,
+				51DF19BF2A7B349E0060813B /* Book.cpp in Sources */,
+				51DF19BD2A7B349E0060813B /* Publication.cpp in Sources */,
+				51DF19BE2A7B349E0060813B /* ms4_tester.cpp in Sources */,
+				51DF19C12A7B349E0060813B /* Utils.cpp in Sources */,
+				51DF19C32A7B349E0060813B /* Lib.cpp in Sources */,
+				51DF19C02A7B349E0060813B /* Date.cpp in Sources */,
+				51DF19C22A7B349E0060813B /* Streamable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5124932D2A777F8200B9210F /* Debug */ = {
+		51DF19A82A7B34720060813B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -200,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		5124932E2A777F8200B9210F /* Release */ = {
+		51DF19A92A7B34720060813B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -251,7 +277,7 @@
 			};
 			name = Release;
 		};
-		512493302A777F8200B9210F /* Debug */ = {
+		51DF19AB2A7B34720060813B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -259,7 +285,7 @@
 			};
 			name = Debug;
 		};
-		512493312A777F8200B9210F /* Release */ = {
+		51DF19AC2A7B34720060813B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -270,25 +296,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		512493232A777F8200B9210F /* Build configuration list for PBXProject "Xcode proj" */ = {
+		51DF199E2A7B34720060813B /* Build configuration list for PBXProject "Xcode proj" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5124932D2A777F8200B9210F /* Debug */,
-				5124932E2A777F8200B9210F /* Release */,
+				51DF19A82A7B34720060813B /* Debug */,
+				51DF19A92A7B34720060813B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5124932F2A777F8200B9210F /* Build configuration list for PBXNativeTarget "Xcode proj" */ = {
+		51DF19AA2A7B34720060813B /* Build configuration list for PBXNativeTarget "Xcode proj" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				512493302A777F8200B9210F /* Debug */,
-				512493312A777F8200B9210F /* Release */,
+				51DF19AB2A7B34720060813B /* Debug */,
+				51DF19AC2A7B34720060813B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 512493202A777F8200B9210F /* Project object */;
+	rootObject = 51DF199B2A7B34720060813B /* Project object */;
 }
