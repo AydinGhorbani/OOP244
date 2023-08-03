@@ -1,3 +1,4 @@
+#copyright Aydin Ghorbani :)))))))))))))
 import pyautogui as gui
 import time
 
@@ -8,8 +9,6 @@ print('Click on the terminal/console window where the automated keyboard data ne
 print('NOTE: You have 5 seconds to do this!')
 time.sleep(5)
 
-# auto type test data from text file:
-#with open('w4p2-inputs.txt', 'r') as tst:
 with open(datafile, 'r') as tst:
     time.sleep(1)
     tst = tst.readlines()
