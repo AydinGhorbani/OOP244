@@ -45,9 +45,6 @@ namespace sdds {
             read();
         }
     }
-
-
-
     void Text::read() {
         // https://stackoverflow.com/questions/195323/what-is-the-most-elegant-way-to-read-a-text-file-with-c
         // code use in this part is copied. (source above)

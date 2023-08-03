@@ -18,9 +18,10 @@ namespace sdds {
        char* m_content{};
       int getFileLength()const;
    protected:
+       
     const char& operator[](int index)const;
-
     const char* getContent() const;
+       
    public:
     Text(const char* filename=nullptr);
     Text(const Text& T);

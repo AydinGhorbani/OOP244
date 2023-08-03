@@ -14,6 +14,7 @@
 
 namespace sdds {
 
+
 HtmlText::HtmlText(const HtmlText& src){
   *this = src;
 }
@@ -27,6 +28,7 @@ HtmlText:: HtmlText(const char *filename, const char *title) : Text(filename) {
 HtmlText::~HtmlText() {
   if (m_title) delete[] m_title;
 }
+
 
 HtmlText &HtmlText::operator=(const HtmlText& src) {
   if (this != &src)

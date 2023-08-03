@@ -34,6 +34,7 @@ void displayFile(const char* filename) {
    cout << endl << "==================================================" << endl;
 }
 int main() {
+   
    Text T("/Users/aydinghorbani/Desktop/OOP245/github/OOP244/WS9/Xcode prj/test.txt");
    Text Y("/Users/aydinghorbani/Desktop/OOP245/github/OOP244/WS9/Xcode prj/dcwr.txt");
    Text Z;
@@ -49,3 +50,7 @@ int main() {
    displayFile("/Users/aydinghorbani/Desktop/OOP245/github/OOP244/WS9/Xcode prj/dcwr.txt");
    return 0;
 }
+
+
+
+

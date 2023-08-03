@@ -33,6 +33,7 @@ Utils Ut;
 		}
 		return len;
 	}
+
     const char* Utils::strStr(const char* str1, const char* str2) {
     while (*str1 != '\0') {
         const char* p1 = str1;
