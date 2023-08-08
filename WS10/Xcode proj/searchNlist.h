@@ -12,9 +12,6 @@
 
 #include <iostream>
 #include "Collection.h"
-#include "Car.h"
-#include "Student.h"
-#include "Employee.h"
 
 using namespace std;
 namespace sdds{
