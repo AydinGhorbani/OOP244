@@ -180,14 +180,14 @@ namespace sdds {
               cin >> *pubPtr;
            }
 
-           if (cin.fail()) {
+           if (cin.fail()&& flag) {
               cin.ignore();
               cin.clear();
               cout << "Aborted!" << endl;
               exit(0);
            }
            else {
-              if (!flag && confirm("Add this publication to the library?")) {
+              if (flag && confirm("Add this publication to the library?")) {
                  if (*pubPtr) {
                     m_LLRN++;
                     pubPtr->setRef(m_LLRN);
@@ -234,9 +234,9 @@ namespace sdds {
                       if (!(cin >> membershipInput)) {
                           cin.clear();
                           cin.ignore(45678, '\n');
-                          cout << "Invalid Selection, try again: ";
+                          cout << "Invalid membership number, try again: ";
                       } else if (membershipInput < 10000 || membershipInput > 99999) {
-                          cout << "Invalid Selection, try again: ";
+                          cout << "Invalid membership number, try again: ";
                       } else {
                           validInput = true;
                       }
@@ -246,7 +246,7 @@ namespace sdds {
               } while (membershipInput < 10000 && membershipInput > 99999);
               getPub(libRef)->set(membershipInput);
               m_changed = true;
-              cout << "Publication checked out";
+              cout << "Publication checked out" << endl;
            }
         }
         cout << endl;
@@ -293,11 +293,11 @@ namespace sdds {
            // cout << selection << "<<<<<<<selection<<<<<<<<" << endl;
             // The loop was not functiong. the exit point had a problem 
             //instade of debugging jut this line was added .
-            cout << endl;
+  
         } while (selection != 0);
 
      
-       cout << "-------------------------------------------" << endl;
+       cout << "\n-------------------------------------------" << endl;
        cout << "Thanks for using Seneca Library Application" << endl;
     }
    LibApp::~LibApp() {
