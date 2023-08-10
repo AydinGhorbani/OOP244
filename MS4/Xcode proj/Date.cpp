@@ -5,7 +5,7 @@
 // Author	Fardad Soleimanloo
 // Revision History
 // -----------------------------------------------------------
-// Name  aydin Ghorbani             Date 23/07/14                    Reason
+// Name  aydin Ghorbani             Date                     Reason
 // 
 /////////////////////////////////////////////////////////////////
 #define _CRT_SECURE_NO_WARNINGS
@@ -118,21 +118,22 @@ void Date::setToToday() {
 
        return is;
    }
-   std::ostream& Date::write(std::ostream& os) const
-   {
-       if (bad())
-       {
-           os << dateStatus();
+    std::ostream& Date::write(std::ostream& os)const {
+       if (bad()) {
+          os << dateStatus();
        }
-       else
-       {
-           os << std::setfill('0') << std::setw(4) << m_year << "/";
-           os << std::setw(2) << m_mon << "/";
-           os << std::setw(2) << m_day;
+       else {
+          os << m_year << "/";
+          os.width(2);
+          os.fill('0');
+          os <<right<< m_mon << "/";
+          os.width(2);
+          os.fill('0');
+          os <<right<< m_day;
+          os.fill(' ');
        }
-
        return os;
-   }
+    }
    int Date::getdays1_1_1() const
    {
        return daysSince0001_1_1();

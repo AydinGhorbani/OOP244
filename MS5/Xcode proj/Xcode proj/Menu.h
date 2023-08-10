@@ -35,7 +35,7 @@ namespace sdds {
         operator bool() const;
         operator const char* () const;
         std::ostream& display(std::ostream& os = std::cout);
-        virtual ~MenuItem();
+        ~MenuItem();
         friend class Menu;
     };
 
@@ -48,7 +48,7 @@ namespace sdds {
     public:
         Menu();
         Menu(const char* title);
-        virtual ~Menu();
+        ~Menu();
         Menu(const Menu& M) = delete;
         void operator=(const Menu& M) = delete;
         std::ostream& displayMenuTitle(std::ostream& os);

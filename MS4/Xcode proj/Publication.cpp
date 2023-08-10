@@ -146,39 +146,33 @@ std::istream& Publication::read(std::istream& istr) {
 }
 
 std::ostream& Publication::write(std::ostream& os) const {
-   char temp[SDDS_TITLE_WIDTH + 1]{};
-   Ut.strnCpy(temp,m_title,SDDS_TITLE_WIDTH);
-   if (conIO(os)) {
-      os << "| " << m_shelfId << " | ";
-      os.width(SDDS_TITLE_WIDTH);
-      os.fill('.');
-      os << std::left << temp << " | ";
-      os.unsetf(ios::left);
-      if (m_membership != 0) {
-         os << m_membership;
-      }
-      else {
-         os << " N/A ";
-      }
-      os << " | " << m_date << " |";
-   }
-   else {
-      os << type() << "\t";
-      os << "\t" << m_libRef;
-      os << "\t" << m_shelfId;
-      os << "\t" << m_title << "\t";
-      if (onLoan()) {
-         os << m_membership;
-      }
-      else {
-         os << " N/A ";
-      }
-      os << "\t" << m_date;
-   }
+    
+       char temp[SDDS_TITLE_WIDTH + 1] = { 0 };
+       Ut.strnCpy(temp, m_title, SDDS_TITLE_WIDTH);
 
-   return os;
-}
+    if (conIO(os)) {
+        os << "| " << m_shelfId << " | " << setw(30) << left << setfill('.') << temp << " | ";
 
+        if (onLoan()) {
+            os << m_membership;
+        } else {
+            os << " N/A ";
+        }
+
+        os << " | " << m_date << " |";
+    }
+
+       
+       else {
+          os << type() << "\t";
+          os << m_libRef << "\t" ;
+          os << m_shelfId << "\t";
+          os << m_title << "\t";
+          os << m_membership << "\t" ;
+          os << m_date;
+       }
+       return os;
+    }
 
 	Publication::operator bool() const {
 

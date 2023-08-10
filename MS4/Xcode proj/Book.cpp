@@ -22,8 +22,6 @@
     Book::Book() {
         m_name = nullptr;
     }
-
-
     char Book::type()const
     {
         return 'B';

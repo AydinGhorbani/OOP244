@@ -30,8 +30,7 @@ namespace sdds {
 
     MenuItem::MenuItem(const char* textContent) {
         if (textContent && textContent[0]) {
-            menuContent = new char[strlen(textContent) + 1];
-            strcpy(menuContent, textContent);
+            Ut.aloCpy(menuContent, textContent);
         }
         else {
             setEmpty();
