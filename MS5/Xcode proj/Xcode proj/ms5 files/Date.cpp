@@ -108,7 +108,6 @@ void Date::setToToday() {
        if (is.fail())
        {
            is.clear();
-//         is.ignore(1000, '\n');
            errCode(CIN_FAILED);
        }
        else

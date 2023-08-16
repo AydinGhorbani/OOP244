@@ -17,10 +17,10 @@ Write exactly which part of the code is given to you as help and
 who gave it to you, or from what source you acquired it.
 -----------------------------------------------------------*/
 #define _CRT_SECURE_NO_WARNINGS
-#include "Menu.h"
-#include "Utils.h"
 #include <iomanip>
 #include <iostream>
+#include "Menu.h"
+#include "Utils.h"
 using namespace std;
 
 namespace sdds {

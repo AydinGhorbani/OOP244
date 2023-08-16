@@ -122,10 +122,6 @@ namespace sdds {
          if (retVal && retVal < 3) {
             if (retVal == 2) retVal = -1;
             m_currentPage += retVal;
-            //if (m_currentPage == 0) 
-            //   m_currentPage = 1; // don't go before first page
-            //else if (m_currentPage * m_pageSize > m_noOfPubs) //((m_currentPage-1) * m_pageSize > m_noOfPubs) 
-            //   m_currentPage = m_noOfPubs/m_pageSize +1; // don't go after last page
          }
       } while (retVal && retVal < 3);
       return retVal;
